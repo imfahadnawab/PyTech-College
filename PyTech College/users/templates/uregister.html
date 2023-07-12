@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{%block title%}Register{%endblock title%}
+
+
+{%block body%}
+<br>
+<form class="container-fluid   row g-3" method='post'>
+  {%csrf_token%}
+
+  <h1 align="center">Get Registered With Us Today!</h1>
+<div class="container px-4 py-4" style="margin:0px 350px">
+     <div class="col-md-5">
+        <label  class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="fullname" >
+        <br>
+    
+      </div>
+
+        <div class="col-md-5">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" id="inputEmail4">
+          <br>
+        </div>
+        <div class="col-md-5">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" id="inputPassword4">
+          <br>
+        </div>
+        <div class="col-md-5">
+          <label for="inputAddress" class="form-label">Username</label>
+          <input type="text" class="form-control" id="inputAddress" name="username" placeholder="username">
+          <br>
+        </div>
+        <div class="col-md-5">
+          <label for="inputAddress2" class="form-label">Mobile Number</label>
+          <input type="Number" name="number" class="form-control" id="inputAddress2" placeholder="Mobile Number">
+          <br>
+        </div>
+        <div class="col-md-5">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" name="city" class="form-control" id="inputCity">
+          <br>
+        </div>
+
+        <div class="col-md-5">
+            <label for="inputCity" class="form-label">State</label>
+            <input type="text" name="state" class="form-control" id="inputCity">
+            <br>
+        </div>
+  
+
+        <div class="col-md-5">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" name="pcode"class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <br>
+          <a class="nav-link" href="/login">Already have an account?</a>
+<br>
+        <button type="submit" class="btn btn-info btn-xs">Sign in</button>
+
+
+
+    </div>
+  </div>
+</div>
+  </form>
+
+{%endblock body%}

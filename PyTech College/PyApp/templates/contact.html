@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{%block body%}
+  <div class="container py-4 px-4" style="background-color:#000000; color:white">
+    <form method="post" action="/contact/">
+       {% csrf_token %}
+        <fieldset>
+          <div class="form-group">
+            <label for="email" class="form-label mt-4">Email address</label>
+            <input type="email" class="form-control" required id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+<br>
+        </div>
+          <div class="form-group">
+            <fieldset>
+              <label class="form-label mt-4"  name="fullname" >Full Name</label>
+              <input class="form-control" required type="text" placeholder="Full Name" name="fullname" >
+            </fieldset>
+          </div>
+          <br>
+          <div class="form-group">
+            <fieldset>
+              <label class="form-label mt-4" >Phone Number</label>
+              <input class="form-control"  placeholder="Phone Number" name="phone">
+            </fieldset>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="exampleSelect1" class="form-label mt-4" >Subject</label>
+            <select class="form-select" required id="exampleSelect1" name="subject">
+              <option value="NULL">Default</option>
+              <option>Courss Related</option>
+              <option>Faculty Related</option>
+              <option>Fee Related</option>
+              <option>Registration Related</option>
+              <option>Others</option>
+            </select>
+          </div>
+<br>
+<br>
+          <div class="form-group">
+            <label for="exampleTextarea" required class="form-label mt-4" >Description</label>
+            <textarea class="form-control" id="exampleTextarea" name="description" rows="3" placeholder="Describe"></textarea>
+          </div>
+ 
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="mt-4">Terms n Conditions</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked="">
+              <label class="form-check-label" for="flexCheckDefault">
+                By submitting your information through the contact form, you agree to our Terms and Conditions and consent to the collection, processing, and storage of your personal data for the purpose of responding to your inquiry. Please review our Privacy Policy for more information on how we handle and protect your data.
+
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+              <label class="form-check-label" for="flexCheckChecked">
+                By contacting us through the provided contact information, you acknowledge and agree to abide by our Terms and Conditions. Please read our Terms and Conditions carefully before reaching out to us. If you do not agree with any part of our terms, we kindly request that you refrain from using our contact services.
+
+              </label>
+            </div>
+          </fieldset>
+        </fieldset>
+   <br>
+   <br>
+          <button type="submit" class="btn btn-info btn-xs">Submit</button>
+        </fieldset>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+</div>
+{%endblock body%}
